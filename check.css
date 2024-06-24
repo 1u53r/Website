@@ -1,0 +1,42 @@
+/* Media Queries */
+@media (max-width: 1360px) {
+    .services div {
+        flex: 1 0 23vw; /* Adjusted width for responsiveness */
+    }
+}
+
+@media (max-width: 1125px) {
+    .services div {
+        flex: 1 0 28vw; /* Further adjusted width for smaller screens */
+    }
+}
+
+@media (max-width: 855px) {
+    .services div {
+        flex: 1 0 100%; /* Full width on smaller devices */
+    }
+    
+    .find-out-more {
+        width: 60%;
+        height: 6vh;
+    }
+}
+
+@media (max-width: 777px) {
+    .extra .message,
+    .extra .Blog,
+    .extra .newsletter {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+}
+
+@media (max-width: 575px) {
+    .footer .footer-div div,
+    .social-media div {
+        width: 100%; /* Full width for footer and social media on smallest screens */
+    }
+    
+    .footer input[type="text"] {
+        width: 100%;
+    }
+}
