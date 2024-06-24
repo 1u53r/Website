@@ -369,7 +369,7 @@ footer .footer-div div input::placeholder {
 @media (max-width: 470px) {
     li {
         margin: 10px;
-        font-size: small;
+        font-size: x-small;
     }
 }
 
@@ -496,11 +496,12 @@ footer .footer-div div input::placeholder {
     .social-media div {
         margin: 10px;
         width: 100vw;
+        font-size: 10px;
     }
 }
 
 @media (max-width:575px){
-    .bottom div:nth-child(2){
+    .bottom:nth-child(2){
         font-size: 10px;
     }
 
