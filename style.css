@@ -8,7 +8,7 @@
 body {
     background-color: black;
     color: white;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 .header {
@@ -57,7 +57,7 @@ li {
 }
 
 .section {
-    height: 120vh;
+    height: auto;
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
@@ -65,16 +65,15 @@ li {
 }
 
 .section .services {
-    height: 100vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(39, 39, 39, 0.295);
-    border: 1px solid palegreen;
 }
 
 .section .testimonials {
-    height: 1500px;
+    height: 50vh;
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -84,7 +83,6 @@ li {
     overflow: hidden;
     /* Hide overflowing content */
     width: 100vw;
-    border: 1px solid salmon;
 }
 
 .quotes {
@@ -188,9 +186,8 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200vh;
+    height: 50vh;
     width: 100vw;
-    border: 1px solid chocolate;
     margin-top: 10px;
     /* border: 1px solid green; */
 }
@@ -305,6 +302,28 @@ footer .footer-div div input::placeholder {
 
 
 /* media queries */
+
+@media(max-width:1360px) {
+    .quotes {
+        height: auto;
+    }
+
+    .section {
+        margin-top: 20px;
+    }
+
+    .find-out-more {
+        width: 30%;
+        height: 50px;
+    }
+
+    .section .services .wedding,
+    .section .services .corporate-events,
+    .section .services .social-gat{
+        width: 23vw;
+    }
+}
+
 @media (max-width: 470px) {
     li {
         margin: 10px;
@@ -313,26 +332,126 @@ footer .footer-div div input::placeholder {
 }
 
 
-@media (max-width :1299) {
+@media (max-width :1429px) and (min-width:1300px) {
 
     .section .services .wedding,
     .section .services .corporate-events,
     .section .services .social-gat {
-        height: 26vh;
+        height: 30vh;
         width: 18vw;
-        margin: 20px;
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
+    }
+
+    .section .testimonials {
+        height: auto;
+    }
+
+}
+
+@media (max-width:911px) {
+    .quotes {
+        height: auto;
+        padding-bottom: 5vh;
+        /* padding-top: 5vh; */
+    }
+
+    .find-out-more {
+        width: 30%;
+        /* height: 25%; */
     }
 
     .section .services {
-        height: 80vh;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        height: auto;
     }
 
+    .section .services div:first-of-type,
+    .section .services div:first-of-type,
+    .section .services div:first-of-type {
+        margin-top: 42px;
+        margin-bottom: 20px;
+    }
 
+    .section .services .wedding,
+    .section .services .corporate-events,
+    .section .services .social-gat {
+        height: 30vh;
+        width: 28vw;
+    }
+
+}
+
+@media(max-width:855px) {
+
+    .section .services .wedding,
+    .section .services .corporate-events,
+    .section .services .social-gat {
+        height: 30vh;
+        width: 100vw;
+        border-radius: 0px;
+    }
+
+    .quotes {
+        height: auto;
+        font-size: 10px;
+    }
+
+    .find-out-more {
+        width: 60%;
+        height: 6vh;
+    }
+}
+
+@media(max-width:777px) {
+    .extra {
+        flex-direction: column;
+        font-size: 10px;
+        height: auto;
+    }
+
+    .extra .message,
+    .extra .Blog,
+    .extra .newsletter {
+        width: 90%;
+    }
+}
+
+@media(max-width:1345px) and (min-width:1099px) {
+    .footer-div {
+        font-size: 10px;
+    }
+}
+
+@media(max-width:1099px) {
+    footer .footer-div {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    footer .footer-div div {
+        width: 90vw;
+        margin: 10px;
+    }
+}
+
+@media(max-width:1130px) {
+    .bottom {
+        flex-direction: column;
+    }
+
+    .social-media {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .social-media div {
+        margin: 10px;
+    }
 }
