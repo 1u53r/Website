@@ -23,3 +23,6 @@ function prevSlide() {
 
 // Optional: Auto slide
 setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+// Optional: Auto start animation
+document.querySelector('.header-image').classList.add('animate');

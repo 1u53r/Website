@@ -1,42 +1,52 @@
-/* Media Queries */
-@media (max-width: 1360px) {
-    .services div {
-        flex: 1 0 23vw; /* Adjusted width for responsiveness */
-    }
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .header-image {
+    width: 100%;
+    height: 80vh; /* Adjust height as needed */
+    overflow: hidden; /* Ensure images do not overflow */
+    position: relative; /* Optional: If you want to position absolute elements inside */
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-@media (max-width: 1125px) {
-    .services div {
-        flex: 1 0 28vw; /* Further adjusted width for smaller screens */
-    }
 }
-
-@media (max-width: 855px) {
-    .services div {
-        flex: 1 0 100%; /* Full width on smaller devices */
+  
+  .slide{
+    display: flex;
+    transition: transform 0.5s ease-out; /* Smooth slide transition */
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    object-fit:contain; /* Ensure images fill the space without stretching */
+    aspect-ratio: 16/9;
+  }
+  
+  @keyframes slideshow {
+    0%, 100% {
+      transform: translateX(0);
     }
-    
-    .find-out-more {
-        width: 60%;
-        height: 6vh;
+    20% {
+      transform: translateX(-100%);
     }
-}
-
-@media (max-width: 777px) {
-    .extra .message,
-    .extra .Blog,
-    .extra .newsletter {
-        width: 90%; /* Adjusted width for smaller screens */
+    40% {
+      transform: translateX(-200%);
     }
-}
-
-@media (max-width: 575px) {
-    .footer .footer-div div,
-    .social-media div {
-        width: 100%; /* Full width for footer and social media on smallest screens */
+    60% {
+      transform: translateX(-300%);
     }
-    
-    .footer input[type="text"] {
-        width: 100%;
+    80% {
+      transform: translateX(-400%);
     }
-}
+  }
+  
+  .header-image.animate .slide {
+    animation: slideshow 10s infinite; /* Adjust animation duration as needed */
+  }
+  

@@ -6,18 +6,17 @@
 }
 
 body {
-    background-color: black;
     color: white;
     overflow-x: hidden;
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: rgb(183, 221, 236);
+    color: black;
 }
 
 .header {
     height: auto;
     width: 100vw;
     overflow: hidden;
-    background-color: #282828;
+    background-color: rgba(135, 207, 235, 0.514);
     /* Hide any overflowing content */
 }
 
@@ -54,12 +53,51 @@ li {
 
 .header-image {
     background-color: #333;
-    height: 60vh;
+    height: 80vh;
     width: 100vw;
     margin-top: 50px;
     overflow: hidden;
     position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-start;
 }
+
+
+.slide{
+    display: flex;
+    transition: transform 0.5s ease-out; /* Smooth slide transition */
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    object-fit:contain; /* Ensure images fill the space without stretching */
+    aspect-ratio: 16/9;
+  }
+  
+  @keyframes slideshow {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-100%);
+    }
+    40% {
+      transform: translateX(-200%);
+    }
+    60% {
+      transform: translateX(-300%);
+    }
+    80% {
+      transform: translateX(-400%);
+    }
+  }
+  
+  .header-image.animate .slide {
+    animation: slideshow 10s infinite; /* Adjust animation duration as needed */
+  }
+  
 
 .header-image img {
     width: 100%;
@@ -82,19 +120,18 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1a1a1a;
 }
 
 .services h3 {
-    color: #ffffff; /* White text */
+    color: black; /* White text */
 }
 
 .services div p {
-    color: #b0bec5; /* Light gray text */
+    color: black; /* Light gray text */
 }
 
 .testimonials {
-    background-color: #282828; /* Dark gray background */
+    background-color: #3787a1; /* Dark gray background */
     color: #ffffff; /* White text */
 }
 
@@ -116,8 +153,8 @@ li {
     justify-content: center;
     height: 40vh;
     align-items: center;
-    background-color: #1a1a1a; /* Dark gray background */
-    color: #ffffff;
+    background-color: rgb(174, 208, 221); /* Dark gray background */
+    color: black;
 }
 
 .quotes div {
@@ -216,9 +253,8 @@ li {
     align-items: center;
     height: 50vh;
     width: 100vw;
-    margin-top: 10px;
-    background-color: #282828; /* Dark gray background */
-    color: #ffffff;
+    background-color: rgb(223, 188, 193); /* Dark gray background */
+    color: black;
 }
 
 .extra .message,
