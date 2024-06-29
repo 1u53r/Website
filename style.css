@@ -493,6 +493,7 @@ footer .footer-div div input::placeholder {
     .extra .Blog,
     .extra .newsletter {
         width: 90%;
+        padding: 5px;
     }
 }
 
