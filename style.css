@@ -546,3 +546,9 @@ footer .footer-div div input::placeholder {
         height: auto;
     }
 }
+
+@media(max-width:1259px){
+    .header-image{
+        height: auto;
+    }
+}
